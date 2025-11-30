@@ -12,10 +12,10 @@
     },
     {
       "step": "installPlugin",
-      "progress": { "caption": "Installing Secure Custom Fields" },
+      "progress": { "caption": "Installing Simple CPT" },
       "pluginData": {
         "resource": "wordpress.org/plugins",
-        "slug": "secure-custom-fields"
+        "slug": "simple-cpt"
       }
     },
     {

@@ -14,12 +14,12 @@ function xcf_create_sample_services() {
 
     $services = array(
         array(
-            'title' => 'Web Development',
+            'title' => 'Web Development Service',
             'content' => 'Professional web development services tailored to your business needs. We create responsive, fast, and secure websites.',
             'excerpt' => 'Custom web development solutions for your business'
         ),
         array(
-            'title' => 'SEO Optimization',
+            'title' => 'SEO Optimization Service',
             'content' => 'Improve your website\'s visibility with our comprehensive SEO services. We help you rank higher in search results.',
             'excerpt' => 'Boost your online presence with our SEO expertise'
         )
