@@ -1,6 +1,6 @@
 {
   "name": "cpt-commands",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "WordPress Command Palette for Custom Post Types",
   "main": "index.js",
   "files": [

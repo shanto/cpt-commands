@@ -3,7 +3,7 @@ Contributors: yafarhad
 Tags: cpt, scf, acf, commands, site-editor
 Requires at least: 6.8
 Tested up to: 6.9
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 Requires PHP: 8.1
 License: GPLv2 or later
 
@@ -34,6 +34,9 @@ See **Settings** → **CPT Commands** for customization options. This step is op
 Absolutely free and it will remain free forever.
 
 == Changelog ==
+
+= 0.1.3 =
+* CMD+K Everywhere (6.9)
 
 = 0.1.2 =
 * Rebranding

@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from "@wordpress/element";
 import { AsyncModeProvider, useSelect } from "@wordpress/data";
 import { store as coreDataStore } from "@wordpress/core-data";
 import { useCommandLoader } from "@wordpress/commands";
-import { registerPlugin } from "@wordpress/plugins";
+import { createRoot } from '@wordpress/element';
 import { addQueryArgs } from "@wordpress/url";
 import { page as pageIcon } from "@wordpress/icons";
 
@@ -99,8 +99,7 @@ function ContentTypeSearch({ postType }) {
 		name: `cpt-commands/${postType.slug}-search`,
 		hook: (search) => {
 			return ContentTypeCommandLoader({ ...search, type: postType });
-		},
-		context: 'site-editor'
+		}
 	});
 }
 
@@ -120,9 +119,10 @@ function ContentSearchRoot() {
 			if (
 				!postType ||
 				!postType?.supports?.editor ||
-				postType?.slug.match(/^boldblocks_|^acf-|^wp_/) ||
 				!postType?.visibility?.show_ui ||
-				["post", "page", "navigation", "block"].includes(postType.slug)
+				postType?.slug.match(/^boldblocks_|^acf-|^wp_/) ||
+				["post", "page", "navigation", "block"].includes(postType.slug) ||
+				window.CPT_COMMANDS_OPTIONS?.ignored_post_types.includes(postType.slug)
 			) {
 				return false;
 			}
@@ -133,20 +133,28 @@ function ContentSearchRoot() {
 
 	if (postTypes) {
 		return (
-			<AsyncModeProvider value={true}>
+			<>
 				{postTypes.map((postType) => (
 					<ContentTypeSearch
 						postType={postType}
 						key={postType.slug}
 					/>
 				))}
-			</AsyncModeProvider>
+			</>
 		);
 	} else {
 		return null;
 	}
 }
 
-registerPlugin("cpt-commands-root", {
-	render: ContentSearchRoot,
+document.addEventListener("DOMContentLoaded", () => {
+	const CPT_ROOT_ID = 'cpt-commands-global-root';
+	if (document.getElementById(CPT_ROOT_ID)) {
+		return;
+	}
+	const mount = document.createElement('div');
+	mount.id = CPT_ROOT_ID;
+	document.body.appendChild(mount);
+	const root = createRoot(mount);
+	root.render(<ContentSearchRoot />);
 });

@@ -8,7 +8,7 @@
  * Author URI:      https://github.com/shanto/
  * Text Domain:     cpt-commands
  * Domain Path:     /languages
- * Version:         0.1.2
+ * Version:         0.1.3
  *
  * @package         CPT_Commands
  */
@@ -23,27 +23,31 @@ class CPT_Commands
     static $demo_link = "";
 
     static function init() {
-        add_action('enqueue_block_editor_assets', [__CLASS__, 'register_assets']);
         add_action('admin_enqueue_scripts', [__CLASS__, 'register_assets']);
         add_action('admin_init', [__CLASS__, 'admin_init']);
         add_action('admin_menu', [__CLASS__, 'admin_menu']);
     }
 
     static function register_assets() {
-        $current_screen = get_current_screen();
-        if ( !method_exists( $current_screen, 'is_block_editor' ) || !$current_screen->is_block_editor() ) {
-            return;
-        }
-
         $asset_file = include plugin_dir_path( __FILE__ ) . 'build/index.asset.php';
 
         wp_enqueue_script(
             'cpt-commands',
             plugin_dir_url( __FILE__ ) . 'build/index.js',
-            $asset_file['dependencies'],
+            [ 'wp-element', 'wp-data', 'wp-core-data', 'wp-commands' ],
             $asset_file['version'],
             true
         );
+
+		$options = get_option('cpt_commands_options', [
+			'ignored_post_types' => [],
+		]);
+
+		wp_localize_script(
+			'cpt-commands',
+			'CPT_COMMANDS_OPTIONS',
+			$options
+		);
     }
 
     static function admin_init() {
