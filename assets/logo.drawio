@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 YaBrowser/25.10.0.0 Safari/537.36" version="29.2.9">
+  <diagram name="Page-1" id="Azo-q20UA0BsSE2cz3C9">
+    <mxGraphModel dx="374" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="256" pageHeight="256" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aPkAF_BV4culBsHq4bUM-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=light-dark(#006EAF,#808080);gradientColor=light-dark(#000000,#003366);gradientDirection=radial;" value="" vertex="1">
+          <mxGeometry height="255" width="255" x="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aPkAF_BV4culBsHq4bUM-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;fontSize=84;strokeWidth=1;verticalAlign=middle;fontFamily=Roboto Mono;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRoboto%2BMono;" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;font&gt;&lt;span&gt;K&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" x="135" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="aPkAF_BV4culBsHq4bUM-5" connectable="0" parent="1" style="group;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="100" width="100" x="25" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="aPkAF_BV4culBsHq4bUM-2" parent="aPkAF_BV4culBsHq4bUM-5" style="rounded=1;whiteSpace=wrap;html=1;align=center;fontSize=40;" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;font style=&quot;font-size: 34px; line-height: 50%;&quot; face=&quot;Google Sans&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Google+Sans&quot;&gt;ctrl&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 34px; line-height: 50%;&quot; face=&quot;Google Sans&quot; data-font-src=&quot;https://fonts.googleapis.com/css?family=Google+Sans&quot;&gt;&lt;br&gt;cmd&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="100" as="geometry" />
+        </mxCell>
+        <mxCell id="aPkAF_BV4culBsHq4bUM-3" edge="1" parent="aPkAF_BV4culBsHq4bUM-5" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="91" y="52" />
+            </Array>
+            <mxPoint x="11" y="52" as="sourcePoint" />
+            <mxPoint x="11" y="52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aPkAF_BV4culBsHq4bUM-6" parent="1" style="text;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;glass=0;shadow=0;textShadow=1;fontColor=light-dark(#000000,#D5E8D4);fontFamily=Rubik Vinyl;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRubik%2BVinyl;spacing=2;fontStyle=0;html=1;fontSize=96;" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Rubik+Vinyl&quot; face=&quot;Rubik Vinyl&quot;&gt;CPT&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="223" x="20" y="29" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
